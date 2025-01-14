@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonction Javascript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style/css/style.css">
+</head>
+
+<body>
+    <header class="container px-1 py-1 fixed">
+
+        <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand fw-bold" href="#">Javascript Fonctions</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#chaines">Chaînes</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#tableau">Tableaux</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#mathematiques">Mathématiques</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+        </nav>
+
+    </header>
+
+
+    <!-- SECTION MANIPULATION DES CHAINES -->
+    <section id="chaines" class="container-fluid">
+        <div class="container">
+            <div class="mb-5 text-center fw-bold fs-2">MANIPULATION DES CHAINES</div>
+            
+            <!-- Inverser une chaîne -->
+            <div class="row mb-5">
+                <h3 class="mb-3">1) Fonction INVERSER une chaîne</h3>
+                <div class="col-12 col-md-9 mb-2 mb-md-2">
+                    <input type="text" placeholder="Entrez une phrase ou un mot" required class="form-control" id="input1_inverser">
+                </div>
+                <div class="col-12 col-md-3">
+                    <button class="btn btn-primary w-100" id="btn_inverser">INVERSER</button>
+                </div>
+                <div class="col-12 mt-2">
+                    <input type="text" placeholder="Phrase ou mot inversé(e)" class="form-control" id="input2_inverser">
+                </div>
+            </div>
+
+            <!-- Compter le nombre de caractères -->
+            <div class="row mb-5">
+                <h3 class="mb-3">2) Fonction pour COMPTER le nombre de caractères dans une chaîne</h3>
+                <div class="col-12 col-md-9 mb-2 mb-md-2">
+                    <input type="text" placeholder="Entrez une phrase ou un mot" required class="form-control" id="input1_compter">
+                </div>
+                <div class="col-12 col-md-3">
+                    <button class="btn btn-primary w-100" id="btn_compter">COMPTER</button>
+                </div>
+                <div class="col-12 text-center mt-2">
+                    <h2 class="fw-bold"><span class="text-danger fs-1" id="compteur">0</span> caractères</h2>
+                </div>
+            </div>
+
+            <!-- Majuscule de la 1ère lettre -->
+            <div class="row mb-5">
+                <h3 class="mb-3">3) Fonction pour mettre en MAJUSCULE la 1ère lettre d'un mot</h3>
+                <div class="col-12 col-md-9 mb-2 mb-md-2">
+                    <input type="text" placeholder="Entrez une phrase en minuscule" required class="form-control" id="input1_majuscule">
+                </div>
+                <div class="col-12 col-md-3">
+                    <button class="btn btn-primary w-100" id="btn_majuscule">MAJUSCULE</button>
+                </div>
+                <div class="col-12 mt-2">
+                    <input type="text" placeholder="Phrase Avec La 1ère Lettre Du Mot En Majuscule" class="form-control" id="input2_majuscule">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION MANIPULATION DES TABLEAUX -->
+    <section id="tableau" class="container-fluid section mt-5">
+        <div class="container">
+            <div class="mb-5 text-center fw-bold fs-2">MANIPULATION DES TABLEAUX</div>
+
+            <!-- Trouver Minimum et Maximum -->
+            <div class="row mb-5">
+                <h3 class="mb-3">1) Fonction pour TROUVER le Maximum et Minimum d'un tableau</h3>
+                <div class="col-12 col-md-9 mb-2 mb-md-2">
+                    <input type="number" required placeholder="Entrez un tableau séparé par des virgules" class="form-control" id="input_rechercher">
+                </div>
+                <div class="col-12 col-md-3">
+                    <button class="btn btn-primary w-100" id="btn_rechercher">RECHERCHER</button>
+                </div>
+                <div class="col-12 text-center mt-2">
+                    <h2 class="fw-bold fs-1">Minimum : <span class="text-danger" id="min">0</span> | Maximum : <span class="text-danger" id="max">0</span></h2>
+                </div>
+            </div>
+
+            <!-- Calculer la somme -->
+            <div class="row mb-5">
+                <h3 class="mb-3">2) Fonction pour CALCULER LA SOMME des éléments d'un tableau</h3>
+                <div class="col-12 col-md-9 mb-2 mb-md-2">
+                    <input type="number" required placeholder="Entrez un tableau séparé par des virgules" class="form-control" id="input_somme">
+                </div>
+                <div class="col-12 col-md-3">
+                    <button class="btn btn-primary w-100" id="btn_somme">SOMME</button>
+                </div>
+                <div class="col-12 text-center mt-2">
+                    <h2 class="fw-bold">La SOMME des éléments du tableau est : <span class="text-danger" id="somme">0</span></h2>
+                </div>
+            </div>
+
+            <!-- Filtrer les nombres pairs et impairs -->
+            <div class="row mb-5">
+                <h3 class="mb-3">3) Fonction pour FILTRER les nombres pairs et impairs d'un tableau</h3>
+                <div class="col-12 col-md-9 mb-2 mb-md-2">
+                    <input type="number" required placeholder="Entrez un tableau séparé par des virgules" class="form-control" id="input1_filtrer">
+                </div>
+                <div class="col-12 col-md-3">
+                    <button class="btn btn-primary w-100" id="btn_filtrer">FILTRER</button>
+                </div>
+                <div class="col-12 text-center mt-2">
+                    <h2 class="fw-bold">Nombre(s) Pair(s) : <span class="text-danger" id="input2_pairs">0</span> | Nombre(s) Impair(s) : <span class="text-danger" id="input2_impairs">0</span></h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- SECTION FONCTIONS MATHEMATIQUES -->
+    <section id="mathematiques" class="container-fluid section mt-5">
+        <div class="container">
+            <div class="mb-5 text-center fw-bold fs-2">FONCTIONS MATHEMATIQUES</div>
+
+            <!-- Calculer la factorielle -->
+            <div class="row mb-5">
+                <h3 class="mb-3">1) Fonction pour CALCULER LA FACTORIELLE D'UN NOMBRE</h3>
+                <div class="col-12 col-md-9 mb-2 mb-md-2">
+                    <input type="number" placeholder="Entrez votre nombre" required class="form-control" id="input_factoriel">
+                </div>
+                <div class="col-12 col-md-3">
+                    <button class="btn btn-primary w-100" id="btn_factoriel">FACTORIEL</button>
+                </div>
+                <div class="col-12 text-center mt-2">
+                    <h2 class="fw-bold fs-1">La FACTORIELLE de ce nombre est : <span class="text-danger" id="factoriel">0</span></h2>
+                </div>
+            </div>
+
+            <!-- Verifier si un nombre est premier -->
+            <div class="row mb-5">
+                <h3 class="mb-3">2) Fonction pour VERIFIER SI UN NOMBRE EST PREMIER</h3>
+                <div class="col-12 col-md-9 mb-2 mb-md-2">
+                    <input type="number" placeholder="Entrez votre nombre" required class="form-control" id="input_premier">
+                </div>
+                <div class="col-12 col-md-3">
+                    <button class="btn btn-primary w-100" id="btn_verifier">VERIFIER</button>
+                </div>
+                <div class="col-12 text-center mt-2">
+                    <h2 class="fw-bold fs-1 text-danger" id="nombre_premier"></h2>
+                </div>
+            </div>
+
+            <!-- Calculer la suite de fibonacci -->
+            <div class="row">
+                <h3 class="mb-3">3) Fonction pour CALCULER LA SOUS-SUME D'UNE SERIE DE FIBONACCI</h3>
+                <div class="col-12 col-md-9 mb-2 mb-md-2">
+                    <input type="number" placeholder="Entrez votre nombre" required class="form-control" id="input_suite">
+                </div>
+                <div class="col-12 col-md-3">
+                    <button class="btn btn-primary w-100" id="btn_suite">CALCULER</button>
+                </div>
+                <div class="col-12 text-center mt-2">
+                    <h2 class="fw-bold fs-1">La Suite de Fibonacci de ce nombre est : <span class="text-danger" id="suite"></span></h2>
+                </div>
+            </div>
+    </section>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script src="script/main.js"></script>
+
+</body>
+</html>
